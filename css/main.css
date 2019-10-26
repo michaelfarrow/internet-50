@@ -533,14 +533,23 @@ a:hover {
 #bg {
   overflow: hidden;
   position: relative;
-  width: 140%;
+  width: 200%;
   /* height: 700px;; */
   z-index: 0;
   /*padding-left: 25%;*/
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  margin-left: -20%;
-  margin-right: -20%;     
+  margin-left: -50%;
+  margin-right: -50%;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 769px) {
+  #bg {
+    width: 128%;
+    margin-left: -14%;
+    margin-right: -14%;
+  }
 }
 
 /* #bg .bg-inner {
@@ -552,7 +561,7 @@ a:hover {
     -o-background-size: cover;
        background-size: cover;
   opacity: 0;
-  padding-top: 52.3%
+  padding-top: 21%
 }
 
 #bg .inner.b-loaded {
@@ -637,6 +646,15 @@ header #logo .inner.b-loaded {/*display: block;*/
 
 header #logo span {
   display: none;
+}
+
+header h1 a {
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  color: #9ddcab;
+  text-decoration: none;
 }
 
 @media (min-width: 601px) {
@@ -779,7 +797,11 @@ section .image .inner {
     -o-background-size: cover;
        background-size: cover;
   background-position: center;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+}
+
+section .image .inner.limit-size {
+  max-height: 520px;
 }
 
 section .image .inner.b-loaded {
@@ -815,17 +837,22 @@ section .content p, section .content ul {
   max-width: 27em;
 }
 
-section .content h2 {
+section .content h2,
+section .content .h2 {
   text-transform: uppercase;
   font-family: 'OCRA';
   font-size: 2.2em;
   margin-bottom: 0em;
 }
 
+section .content h3 {
+  text-transform: uppercase;
+}
+
 section .content ul {
   list-style-type: none;
   padding: 0;
-  padding-left: 1.2em;
+  /* padding-left: 1.2em; */
 }
 
 section .content ul li {
@@ -837,7 +864,7 @@ section .content ul li p {
   margin-bottom: 0.6em;
 }
 
-section .content ul li:before {
+/* section .content ul li:before {
   content: '';
   display: block;
   width: 0.55em;
@@ -846,7 +873,7 @@ section .content ul li:before {
   background-color: white;
   top: 0.35em;
   left: -1.2em;
-}
+} */
 
 section .content ul.roomy li {
   margin-bottom: 1.2em;
