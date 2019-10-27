@@ -588,10 +588,16 @@ header {
 }
 
 header .header-inner {
-  padding: 3em 1.5em;
+  padding: 1.5em 1.5em;
   position: relative;
   -moz-box-sizing: border-box;
        box-sizing: border-box
+}
+
+@media (min-width: 769px) {
+  header .header-inner {
+    padding: 3em 3em;
+  }
 }
 
 header .header-inner:before {
